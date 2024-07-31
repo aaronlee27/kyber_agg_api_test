@@ -24,8 +24,7 @@ export async function getTokenApproval(
             // Call the ERC20 approve method
             const approvalTx = await tokenContract.approve(
                 spenderAddress, 
-                BigInt(spendingAmount), 
-                {maxFeePerGas: 100000000000, maxPriorityFeePerGas: 100000000000}
+                BigInt(spendingAmount)
                 );
     
             // Wait for the approve tx to be executed

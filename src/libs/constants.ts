@@ -14,7 +14,7 @@ export enum ChainName {
     LINEA = `linea`,
     POLYGONZKEVM = `polygon-zkevm`,
     AURORA = `aurora`,
-    BTTC = `bittorrent`,
+    BTTC = `bttc`,
     SCROLL = `scroll`,    
 }
 
@@ -45,18 +45,31 @@ interface Token {
     name?: string
 }
 
+// export const tokenIn: Token = {
+//     address: '0x9B5F27f6ea9bBD753ce3793a07CbA3C74644330d',
+//     chainId: ChainId.BTTC.toString(),
+//     decimals: 18,
+//     symbol: 'Binance-Peg BSC-USD_BSC',
+//     name: 'USDT_b'
+// };
+
+
 export const tokenIn: Token = {
-    address: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
-    chainId: ChainId.MATIC.toString(),
-    decimals: 6,
-    symbol: 'USDC.e',
-    name: 'USD Coin (PoS)'
+    address: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+    chainId: ChainId.BTTC.toString(),
+    decimals: 18,
+    symbol: 'bttc',
+    name: 'Bittorrent'
 };
 
 export const tokenOut: Token = {
-    address: '0x1c954e8fe737f99f68fa1ccda3e51ebdb291948c',
-    chainId: ChainId.MATIC.toString(),
+    address: '0xCa424b845497f7204D9301bd13Ff87C0E2e86FCF',
+    chainId: ChainId.BTTC.toString(),
     decimals: 18,
-    symbol: 'KNC',
-    name: 'KyberNetwork Crystal v2 (PoS)'
-};
+    symbol: `USDC_b`,
+    name: `USD Coin_BSC`
+}
+
+export const amountIn = Number(100 * 10**tokenIn.decimals);
+
+export const targetChain = ChainName.BTTC;

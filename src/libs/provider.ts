@@ -3,11 +3,10 @@ import { ChainId } from './constants';
 
 export function getProvider(): ethers.Provider {    
     // Replace this with a RPC of your choice
-    const providerUrl = 'https://polygon.kyberengineering.io';
+    const providerUrl = 'https://rpc.bittorrentchain.io';
     const providerOptions = {
-        // Testing on Polygon POS
-        chainId: ChainId.MATIC,
-        name: 'Polygon'
+        chainId: ChainId.BTTC,
+        name: 'bttc'
     }
     return new ethers.JsonRpcProvider(providerUrl, providerOptions);
 }
